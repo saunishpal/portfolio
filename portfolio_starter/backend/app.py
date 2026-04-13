@@ -1,31 +1,30 @@
-from flask import Flask, render_template
+from flask import Flask, jsonify, request
+from flask_cors import CORS
 import os
 
-app = Flask(
-    __name__,
-    template_folder="../frontend/templates",
-    static_folder="../frontend/static"
-)
+app = Flask(__name__)
+CORS(app)
 
-# Home route
-@app.route('/')
+@app.route("/")
 def home():
-    return render_template('index.html')
+    return jsonify({"message": "Backend is running"})
 
-# About page
-@app.route('/about')
-def about():
-    return render_template('about.html')
-
-# Projects page
-@app.route('/projects')
-def projects():
-    return render_template('projects.html')
-
-# Contact page
-@app.route('/contact')
+@app.route("/api/contact", methods=["POST"])
 def contact():
-    return render_template('contact.html')
+    data = request.get_json()
+    name = data.get("name")
+    email = data.get("email")
+    message = data.get("message")
 
-if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=int(os.environ.get("PORT", 5000)))
+    return jsonify({
+        "success": True,
+        "message": "Form received successfully",
+        "data": {
+            "name": name,
+            "email": email,
+            "message": message
+        }
+    })
+
+if __name__ == "__main__":
+    app.run(host="0.0.0.0", port=int(os.environ.get("PORT", 5000)))
