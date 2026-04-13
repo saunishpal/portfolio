@@ -1,6 +1,11 @@
 from flask import Flask, render_template
+import os
 
-app = Flask(__name__)
+app = Flask(
+    __name__,
+    template_folder="../frontend/templates",
+    static_folder="../frontend/static"
+)
 
 # Home route
 @app.route('/')
@@ -23,6 +28,4 @@ def contact():
     return render_template('contact.html')
 
 if __name__ == '__main__':
-    # Debug mode ON only for development
-    app.run(debug=True)
-
+    app.run(host='0.0.0.0', port=int(os.environ.get("PORT", 5000)))
