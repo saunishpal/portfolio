@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact - Saunish Pal</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+<header>
+  <h1>Get In Touch</h1>
+  {% extends 'base.html' %}
+  {% block title %}About{% endblock %}
+  {% block content %}
+  <p class="subtitle">Have a question or want to collaborate? Send a message!</p>
+</header>
+
+<main class="contact-page">
+  <form class="contact-form">
+    <input type="text" placeholder="Your Name" required>
+    <input type="email" placeholder="Your Email" required>
+    <textarea placeholder="Your Message" required></textarea>
+    <button type="submit">Send Message</button>
+  </form>
+</main>
+
+<footer>
+  <p>© 2025 SAUNISH PAL</p>
+</footer>
+{% endblock %}
+
+</body>
+</html>
+
