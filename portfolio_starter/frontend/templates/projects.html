@@ -4,22 +4,26 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Projects - Saunish Pal</title>
-  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
 <header>
-  <h1>✨ My Projects</h1>
-  {% extends 'base.html' %}
-  {% block title %}About{% endblock %}
-  {% block content %}
-  <p class="subtitle">Demo videos & details</p>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="projects.html">Projects</a>
+    <a href="contact.html">Contact</a>
+  </nav>
 </header>
 
 <main class="projects-page">
+  <section>
+    <h1>✨ My Projects</h1>
+    <p class="subtitle">Demo videos & details</p>
+  </section>
 
   <div class="project-row">
-    <!-- Project 1 -->
     <div class="project-item">
       <div class="video-thumb">
         <iframe src="https://www.youtube.com/embed/YSLEYJ9Rc2U" allowfullscreen></iframe>
@@ -31,7 +35,6 @@
       </div>
     </div>
 
-    <!-- Project 2 -->
     <div class="project-item">
       <div class="video-thumb">
         <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID2" allowfullscreen></iframe>
@@ -43,7 +46,6 @@
       </div>
     </div>
 
-    <!-- Project 3 -->
     <div class="project-item">
       <div class="video-thumb">
         <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID3" allowfullscreen></iframe>
@@ -55,7 +57,6 @@
       </div>
     </div>
 
-    <!-- Project 4 -->
     <div class="project-item">
       <div class="video-thumb">
         <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID4" allowfullscreen></iframe>
@@ -63,39 +64,38 @@
       <h3 class="project-title">AI Startup (VidCut AI)</h3>
       <div class="detail-card">
         <p>Everyone can edit videos just by a prompt.</p>
-        <a href="https://github.com/saunishpal/VidCut AI.git" target="_blank">View on GitHub</a>
+        <a href="https://github.com/saunishpal/VidCut-AI.git" target="_blank">View on GitHub</a>
       </div>
     </div>
-    <!-- Cybersecurity Project 1 -->
-<div class="project-item">
-  <div class="video-thumb">
-    <iframe src="https://www.youtube.com/embed/YOUR_CYBER_VIDEO1" allowfullscreen></iframe>
-  </div>
-  <h3 class="project-title">Vulnerability Scanner</h3>
-  <div class="detail-card">
-    <p>Python tool to scan web apps for common vulnerabilities.</p>
-    <a href="https://github.com/yourusername/vulnerability-scanner" target="_blank">View on GitHub</a>
-  </div>
-</div>
 
-<!-- Cybersecurity Project 2 -->
-<div class="project-item">
-  <div class="video-thumb">
-    <iframe src="https://www.youtube.com/embed/YOUR_CYBER_VIDEO2" allowfullscreen></iframe>
-  </div>
-  <h3 class="project-title">Network Packet Sniffer</h3>
-  <div class="detail-card">
-    <p>Tool to capture & analyze network packets for security testing.</p>
-    <a href="https://github.com/yourusername/packet-sniffer" target="_blank">View on GitHub</a>
-  </div>
-</div>
+    <div class="project-item">
+      <div class="video-thumb">
+        <iframe src="https://www.youtube.com/embed/YOUR_CYBER_VIDEO1" allowfullscreen></iframe>
+      </div>
+      <h3 class="project-title">Vulnerability Scanner</h3>
+      <div class="detail-card">
+        <p>Python tool to scan web apps for common vulnerabilities.</p>
+        <a href="https://github.com/yourusername/vulnerability-scanner" target="_blank">View on GitHub</a>
+      </div>
+    </div>
 
+    <div class="project-item">
+      <div class="video-thumb">
+        <iframe src="https://www.youtube.com/embed/YOUR_CYBER_VIDEO2" allowfullscreen></iframe>
+      </div>
+      <h3 class="project-title">Network Packet Sniffer</h3>
+      <div class="detail-card">
+        <p>Tool to capture and analyze network packets for security testing.</p>
+        <a href="https://github.com/yourusername/packet-sniffer" target="_blank">View on GitHub</a>
+      </div>
+    </div>
   </div>
 </main>
 
 <footer>
   <p>© 2025 SAUNISH PAL</p>
 </footer>
-{% endblock %}
+
+<script src="js/script.js"></script>
 </body>
 </html>
