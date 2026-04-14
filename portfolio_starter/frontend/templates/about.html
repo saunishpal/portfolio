@@ -4,30 +4,36 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About - Saunish Pal</title>
-  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
 <header>
-  <h1>About Me</h1>
-  {% extends 'base.html' %}
-  {% block title %}About{% endblock %}
-  {% block content %}
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="projects.html">Projects</a>
+    <a href="contact.html">Contact</a>
+  </nav>
 </header>
 
-
 <main class="about-page">
-  <p>I’m Saunish Pal – a full stack developer & AI enthusiast.  
-  I love combining technology, creativity, and cybersecurity to build tools that help people.  
-  I’ve built projects like Jarvis AI, chatbots, and interactive web apps.Currently working on an AI Startup
-  named VidCut AI it is basically a video editing tool which is used to edit video just by a prompt   
-  My passion: exploring automation, ethical hacking, and futuristic AI systems.</p>
+  <section>
+    <h1>About Me</h1>
+    <p>
+      I’m Saunish Pal – a full stack developer and AI enthusiast.
+      I love combining technology, creativity, and cybersecurity to build tools that help people.
+      I’ve built projects like Jarvis AI, chatbots, and interactive web apps.
+      Currently I am working on an AI startup named VidCut AI. It is a video editing tool that helps users edit videos just by giving a prompt.
+      My passion is exploring automation, ethical hacking, and futuristic AI systems.
+    </p>
+  </section>
 </main>
 
 <footer>
   <p>© 2025 SAUNISH PAL</p>
 </footer>
-{% endblock %}
+
+<script src="js/script.js"></script>
 </body>
 </html>
-
